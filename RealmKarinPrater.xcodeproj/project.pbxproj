@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A8AD1BAC2D2DB59D00669997 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8AD1BAB2D2DB59D00669997 /* RealmSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A8AD1B992D2DB51600669997 /* RealmKarinPrater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmKarinPrater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AD1BAC2D2DB59D00669997 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = RealmKarinPrater;
 			packageProductDependencies = (
+				A8AD1BAB2D2DB59D00669997 /* RealmSwift */,
 			);
 			productName = RealmKarinPrater;
 			productReference = A8AD1B992D2DB51600669997 /* RealmKarinPrater.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = A8AD1B902D2DB51600669997;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A8AD1BAA2D2DB59D00669997 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A8AD1B9A2D2DB51600669997 /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8AD1BAA2D2DB59D00669997 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8AD1BAB2D2DB59D00669997 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8AD1BAA2D2DB59D00669997 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8AD1B912D2DB51600669997 /* Project object */;
 }
