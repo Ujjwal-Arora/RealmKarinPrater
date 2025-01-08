@@ -13,6 +13,9 @@ struct ItemDetailView: View {
     //@observedObject / @Binding =>
     @ObservedRealmObject var item : ItemModel
     
+//    @Environment(\.realm) var realm
+//    @Environment(\.realmConfiguration) var conf
+    
     var body: some View {
         VStack(alignment : .leading){
             Text("Enter a new name")
@@ -20,7 +23,12 @@ struct ItemDetailView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button("Delete") {
-                
+                if let newItem = item.thaw(), let realm = newItem.realm{
+                    try? realm.write {
+                        realm.delete(newItem)
+
+                    }
+                }
             }
             .buttonStyle(.borderedProminent)
         }

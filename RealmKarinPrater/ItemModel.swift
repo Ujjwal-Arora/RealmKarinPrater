@@ -8,6 +8,7 @@
 import RealmSwift
 import Foundation
 
+//models are classes and not structs in realm
 class ItemModel : Object, ObjectKeyIdentifiable{
     @Persisted(primaryKey: true) var _id : ObjectId //why _id
     @Persisted var name = "\(randomAdjectives.randomElement() ?? "cutie") \(randomNouns.randomElement() ?? "ujju")"

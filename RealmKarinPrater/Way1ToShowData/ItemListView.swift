@@ -21,10 +21,9 @@ struct ItemListView: View {
                 }
                 .onMove(perform: $group.items.move)
                 .onDelete(perform: $group.items.remove)
-                .navigationDestination(for: ItemModel.self) { item in
-                    ItemDetailView(item: item)
-                }
-
+            }
+            .navigationDestination(for: ItemModel.self) { item in
+                ItemDetailView(item: item)
             }
             .navigationBarItems(trailing: EditButton())
             .toolbar {

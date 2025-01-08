@@ -11,7 +11,8 @@ import SwiftUI
 struct RealmKarinPraterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            ItemResultView()
         }
     }
 }
